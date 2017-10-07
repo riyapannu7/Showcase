@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Showcase</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Signika" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    html{
+        font-family: 'Signika', sans-serif;
+
+    }
+    h4{
+        font-family: 'Bree Serif', serif;
+        color: #424242;
+
+    }
+    html,body {
+        padding:0;
+        margin:0;
+        background:black;
+    }
+    .parent{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position:absolute;
+        height:100%;
+        width:100%;
+    }
+    #head{
+    /*position: fixed;*/
+        /*display: block;*/
+
+
+        position:fixed;
+
+        top:0;
+        left:0;
+        /* prevents your fixed panel from being on top of your subsequent panels */
+        z-index: -99;
+
+    }
+    #first{
+        width:100%;
+
+        background-color: #EFEBE9;
+        /*display: block;*/
+        margin-top:100%;
+        padding-top: 15%;
+
+        text-align: center;
+
+    }
+    #content{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 40%;
+    }
+    .panels {
+        position:relative;
+        height:100%;
+        min-height:100%;
+        width:100%;
+        z-index:1000;
+    }
+    #data{
+
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        background-color: black;
+        /*display: block;*/
+        /*margin-top:100%;*/
+        padding-top: 15%;
+        /*padding-right: 10%;*/
+        /*padding-left: 10%;*/
+        /*text-align: center;*/
+        margin-bottom: 50%;
+
+    }
+
+    #info{
+
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        background-color: antiquewhite;
+        /*display: block;*/
+        /*margin-top:100%;*/
+        padding-top: 5%;
+        /*padding-right: 10%;*/
+        /*padding-left: 10%;*/
+        /*text-align: center;*/
+        margin-bottom: 40%;
+
+    }
+
+    .div1a{
+        width:24%;
+
+        margin-top: 40px;
+        margin-left: 4%;
+
+
+        background-color: black;
+        margin-bottom: 40px;
+
+        transition:all 0.6s ease;
+    }
+
+
+    .div1a:hover
+    {
+        -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+        transform: scale(2);
+    }
+    #intro{
+        width: 100%;
+
+    }
+    #info{
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 0%;
+    }
+    #sub{
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 0%;
+        display: flex;
+
+    }
+    #about{
+        font-size: 65px;
+        width: 80%;
+        margin-left: 10%;
+        background-color: #ee6e73;
+        color: white;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        /*text-align: center;*/
+        font-family: 'Bree Serif', serif;
+    }
+    #sub1{
+        width: 50%;
+        float: left;
+        padding-top: 1%;
+        text-align: left;
+    }
+    #sub2{
+        width:50%;
+        float: right;
+        padding-top: 195px;
+        padding-right: 2%;
+        text-align: right;
+        vertical-align: bottom;
+        font-size: 45px;
+        color: #f16c39;
+    }
+    #details{
+        font-size: 30px;
+        padding-left: 3%;
+        text-align: left;
+    }
+    #icon{
+        text-align: center;
+        margin-bottom: 30%;
+        padding-bottom: 5%;
+    }
+    #post{
+        background-color:#424242 ;
+        width: 100%;
+        padding-top: 4%;
+        color: #FAFAFA;
+        font-size: 25px;
+    }
+    #publish{
+        margin-top: 5%;
+        color:#FAFAFA ;
+    }
+    #status{
+        padding-top: 5%;
+        color: #ee6e73;
+        font-size: 25px;
+    }
+
+    #btn{
+        font-size: 25px;
+        margin-top: 7%;
+        color: #ffebee ;
+    }
+
+</style>
+<body>
+<div class="parent">
+    <div id="head" class="panels">
+
+        <img src="gallery1.jpg" width="100%">
+    </div>
+
+    <div id="first" class="panels">
+        <div id="content">
+       <h4>
+        Login with your Facebook account to import your photos into Showcase.
+       </h4>
+    <fb:login-button scope="public_profile,email" data-size="large" height="150px" width="150px" onlogin="checkLoginState();">Login</fb:login-button>
+        <div id="status">
+
+        </div>
+        <button id="btn" class="red accent-2">Fetch Photos</button>
+        </div>
+        <div id="data" >
+
+
+        </div>
+        <div id="about" class="z-depth-5">
+            About the user
+        </div>
+        <div id="info" >
+            <div id="intro">
+            </div>
+        <div id="sub">
+          <div id="sub1">
+
+          </div>
+            <div id="sub2">
+
+            </div>
+        </div>
+        <div id="details">
+
+        </div>
+
+
+        </div>
+        <div id="icon">
+
+        </div>
+
+        <div id="post">
+            <div id="posthead">
+                <h3>Post on Facebook</h3>
+            </div>
+            <div id="enter">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <!--<div class="input-field col s6">-->
+                                <!---->
+                                <!--<i class="material-icons prefix"></i>-->
+                                <!--<textarea id="icon_prefix2" class="materialize-textarea"></textarea>-->
+                                <!--<label for="icon_prefix2">Type Text here</label>-->
+                            <!--</div>-->
+                            <input type="text" class="waves-effect waves-light btn enter">
+                            <a class="waves-effect waves-light btn" id="publish">Post</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--<div class="panels" id="data">-->
+
+    <!--</div>-->
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script
+        src="http://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+</body>
+</html>
